@@ -1,0 +1,513 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #160a0a;
+  overflow-x: hidden;
+}
+
+.top-bar {
+  background-color: #178370;
+  /* Dark green similar to the image */
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.top-bar-left,
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.top-bar-left span {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-left span i {
+  margin-right: 8px;
+}
+
+.top-bar-right a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.top-bar-right a:hover {
+  color: #d4edda;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.navbar-brand .logo {
+  /* Adjust as needed */
+  height: 10px;
+  background-image: url('/resources/NepTrek.png');
+}
+
+.navbar-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.navbar-brand span {
+  color: #ddd;
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+.nav-links {
+  margin-right: auto;
+  /* Push nav-menu to the right */
+  margin-left: 30px;
+}
+
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links ul li {
+  margin: 0 15px;
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links ul li a:hover::after,
+.nav-links ul li a.active::after {
+  width: 100%;
+}
+
+.nav-links ul li a:hover {
+  color: #eee;
+}
+
+.nav-links ul li a.active {
+  color: white;
+  /* Keep active link white */
+  font-weight: 600;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.navbar-actions .lang-switcher {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.navbar-actions .lang-switcher i {
+  margin-right: 5px;
+}
+
+.navbar-actions .lang-switcher span {
+  margin-right: 5px;
+  font-weight: 500;
+}
+
+.book-now-btn {
+  background-color: #38b461;
+  /* Green from the image */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-now-btn:hover {
+  background-color: #2e9f54;
+  transform: translateY(-2px);
+}
+        
+        /* Payment Container */
+        .payment-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .payment-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .payment-header {
+            text-align: center;
+            margin-bottom: 20px;
+            grid-column: 1 / -1;
+        }
+        
+        .payment-header h1 {
+            color: #1a5276;
+            margin-bottom: 10px;
+        }
+        
+        .payment-header p {
+            color: #666;
+        }
+        
+        /* Order Summary */
+        .order-summary {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+        
+        .order-summary h2 {
+            color: #1a5276;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .package-card {
+            display: flex;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .package-image {
+            width: 100px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .package-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .package-details h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #1a5276;
+        }
+        
+        .package-details p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .price-details {
+            margin-top: 20px;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .price-total {
+            font-weight: bold;
+            font-size: 18px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        
+        /* Payment Methods */
+        .payment-methods {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .payment-methods h2 {
+            color: #1a5276;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .payment-option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .payment-option:hover {
+            border-color: #1a5276;
+        }
+        
+        .payment-option.selected {
+            border-color: #1a5276;
+            background-color: #f0f8ff;
+        }
+        
+        .payment-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .payment-title {
+            display: flex;
+            align-items: center;
+        }
+        
+        .payment-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #1a5276;
+        }
+        
+        .payment-name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .payment-details {
+            display: none;
+        }
+        
+        .payment-option.selected .payment-details {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #1a5276;
+            outline: none;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .btn-pay {
+            background: #ff5722;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .btn-pay:hover {
+            background: #e64a19;
+        }
+        
+        .security-notice {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .security-notice i {
+            color: #28a745;
+            margin-right: 8px;
+        }
+        
+        /* Footer */
+       footer {
+  background: #0d1321;
+  color: #fff;
+  padding: 60px 20px 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+/* Logo & About */
+.footer-about h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.footer-about h2 span {
+  color: #00e1b4;
+}
+
+.footer-about p {
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  margin: 10px 0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ccc;
+}
+
+.contact-info i {
+  color: #00e1b4;
+  font-size: 1rem;
+}
+
+/* Footer columns */
+.footer-col h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin: 10px 0;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #00e1b4;
+}
+
+/* Social icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 1rem;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  background: #1c2230;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #00e1b4;
+  color: #0d1321;
+}
+
+/* Bottom footer */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}

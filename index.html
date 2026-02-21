@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NepTra - Nepal Travel</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span><i class="fas fa-phone-alt"></i> +977-9843764833</span>
+      <span><i class="fas fa-envelope"></i> info@neptra.com</span>
+    </div>
+    <div class="top-bar-right">
+      Follow us:
+      <a href="#"><i class="fab fa-facebook-f"></i> FB</a>
+      <a href="#"><i class="fab fa-instagram"></i> IG</a>
+      <a href="#"><i class="fab fa-twitter"></i> TW</a>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="logo"></div>
+      <a href="index.html">NepTra</a> <span>Nepal Travel</span>
+    </div>
+    <div class="nav-links">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="destinations.html">Destination</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="navbar-actions">
+      <div class="lang-switcher">
+        <i class="fas fa-globe"></i>
+        <span>नेपाली</span>
+        <i class="fas fa-caret-down"></i>
+      </div>
+      <a href="#" class="book-now-btn">Book Now</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <h1>NepTra </h1>
+      <h2>Discover Nepal, Your Way</h2>
+      <p>Experience the majestic Himalayas, ancient cultures, and breathtaking adventures. Let us guide you
+        through Nepal's most incredible destinations.</p>
+      <div class="hero-buttons">
+        <a href="packages.html" class="hero-btn explore-btn">Explore Packages <i class="fas fa-arrow-right"></i></a>
+        <a href="#" class="hero-btn watch-video-btn">Watch Video</a>
+      </div>
+    </div>
+    <div class="search-bar-container">
+      <div class="search-input-group">
+        <label for="destination"><i class="fas fa-map-marker-alt"></i> Destination</label>
+        <select id="destination">
+          <option value="">Select destination</option>
+          <option value="kathmandu">Kathmandu</option>
+          <option value="pokhara">Pokhara</option>
+          <option value="everest">Everest Base Camp</option>
+          <option value="chitwan">Chitwan National Park</option>
+        </select>
+      </div>
+      <div class="search-input-group">
+        <label for="travel-dates"><i class="fas fa-calendar-alt"></i> Travel Dates</label>
+        <input type="date" id="travel-dates" placeholder="mm/dd/yyyy">
+      </div>
+      <div class="search-input-group">
+        <label for="travelers"><i class="fas fa-user-friends"></i> Travelers</label>
+        <select id="travelers">
+          <option value="1">1 Person</option>
+          <option value="2">2 People</option>
+          <option value="3">3 People</option>
+          <option value="4+">4 People</option>
+          <option value="4+">5 People</option>
+          <option value="4+">6+ People</option>
+        </select>
+      </div>
+      <button class="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <div class="header">
+    <h1>Featured <span class="packages-highlight">Packages</span></h1>
+    <p>Discover Nepal's most breathtaking destinations with our carefully curated travel packages</p>
+  </div>
+
+  <div class="packages-container">
+    <!-- Kathmandu Weekend Package -->
+    <div class="package-card">
+      <div class="package-image-wrapper">
+        <img src="/resources/Screenshot 2025-01-12 134443.png">
+        <div class="package-duration">2 Nights / 3 Days</div>
+        <div class="package-rating">4.8</div>
+      </div>
+      <div class="package-content">
+        <h3 class="package-title">Kathmandu Weekend</h3>
+        <p class="package-description">Explore Nepal's cultural capital with visits to ancient temples and vibrant
+          markets.</p>
+        <div class="package-price-info">
+          <span class="package-price kathmandu">$199</span>
+          <span class="package-per-person">per person</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pokhara Daytrip Package -->
+    <div class="package-card">
+      <div class="package-image-wrapper">
+        <img src="/resources/pokhara.jpg">
+        <div class="package-duration">1 Day</div>
+        <div class="package-rating">4.9</div>
+      </div>
+      <div class="package-content">
+        <h3 class="package-title">Pokhara Daytrip</h3>
+        <p class="package-description">Experience the serene beauty of Pokhara's lakes and mountain views.</p>
+        <div class="package-price-info">
+          <span class="package-price pokhara">$89</span>
+          <span class="package-per-person">per person</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Annapurna Base Camp Trek Package -->
+    <div class="package-card">
+      <div class="package-image-wrapper">
+        <img src="/resources/mountain.jpg">
+        <div class="package-duration">12 Days</div>
+        <div class="package-rating">4.7</div>
+      </div>
+      <div class="package-content">
+        <h3 class="package-title">Annapurna Base Camp Trek</h3>
+        <p class="package-description">Trek through rhododendron forests to the base of Annapurna massif.</p>
+        <div class="package-price-info">
+          <span class="package-price annapurna">$899</span>
+          <span class="package-per-person">per person</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="features">
+    <div class="feature-card">
+      <div class="icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3>Safe & Secure</h3>
+      <p>Licensed guides and comprehensive travel insurance included</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <h3>Expert Guides</h3>
+      <p>Local experts with 10+ years of trekking experience</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">
+        <i class="fas fa-clock"></i>
+      </div>
+      <h3>24/7 Support</h3>
+      <p>Round-the-clock customer support for peace of mind</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">
+        <i class="fas fa-heart"></i>
+      </div>
+      <h3>Tailor Made</h3>
+      <p>Customized itineraries to match your preferences</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready for Your Nepal Adventure?</h2>
+    <p>Let us create a personalized itinerary just for you</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn primary">
+        <i class="fas fa-route"></i> Plan My Trip
+      </a>
+      <a href="#" class="btn secondary">
+        <i class="fas fa-camera"></i> View Gallery
+      </a>
+    </div>
+  </section>
+
+  <section class="destinations">
+    <h2>Explore <span>Nepal</span></h2>
+    <p>Discover breathtaking destinations across the Himalayan kingdom</p>
+
+    <div class="dest-grid">
+      <div class="dest-card">
+        <img src="/resources/mt.everest.jpg" alt="Everest Base Camp">
+        <div class="overlay">
+          <h3>Everest Base Camp</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Click to explore</p>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <img src="/resources/annapurna1.jpg" alt="Annapurna Circuit">
+        <div class="overlay">
+          <h3>Annapurna Circuit</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Click to explore</p>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <img src="/resources/ghandruk.jpg" alt="Kathmandu Valley">
+        <div class="overlay">
+          <h3>Ghandruk</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Click to explore</p>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <img src="/resources/images (1).jpg" alt="Everest Base Camp">
+        <div class="overlay">
+          <h3>Boudhanath Stupa</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Click to explore</p>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <img src="/resources/Muktinath-Temple-Nepal 2.jpg" alt="Annapurna Circuit">
+        <div class="overlay">
+          <h3>Muktinath Temple</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Click to explore</p>
+        </div>
+      </div>
+      <div class="dest-card">
+        <img src="/resources/pokhara.jpg" alt="Kathmandu Valley">
+        <div class="overlay">
+          <h3>Pokhara Adventure</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Click to explore</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <h2>What Our <span>Travelers Say</span></h2>
+    <p>Real experiences from adventurers who trusted us with their Nepal journey</p>
+
+    <div class="stats-container">
+      <!-- Box 1 -->
+      <div class="stat-box">
+        <img src="https://img.icons8.com/emoji/48/000000/smiling-face.png" alt="Happy Travelers">
+        <h3>10,000+</h3>
+        <p>Happy Travelers</p>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="stat-box">
+        <img src="https://img.icons8.com/color/48/mountain.png" alt="Successful Treks">
+        <h3>500+</h3>
+        <p>Successful Treks</p>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="stat-box">
+        <img src="https://img.icons8.com/emoji/48/star-emoji.png" alt="Rating">
+        <h3>4.9/5</h3>
+        <p>Average Rating</p>
+      </div>
+
+      <!-- Box 4 -->
+      <div class="stat-box">
+        <img src="https://img.icons8.com/color/48/target.png" alt="Experience">
+        <h3>15+</h3>
+        <p>Years Experience</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Traveler Testimonials</h2>
+
+    <div class="testimonial-grid">
+
+      <!-- Card 1 -->
+      <div class="testimonial-card">
+        <img src="resources/mt.everest.jpg" alt="Everest Base Camp" class="top-img">
+        <div class="testimonial-content">
+          <div class="stars">★★★★★</div>
+          <p>"NepTra made my dream of reaching Everest Base Camp come true. The guides were incredible, the
+            accommodation was better than expected, and every detail was perfectly organized. Truly a life-changing
+            experience!"</p>
+          <div class="trip-label">Trip: Everest Base Camp Trek</div>
+          <div class="user-info">
+            <img src="resources/sarah.avif" alt="Sarah Johnson">
+            <div class="user-details">
+              <h4>Sarah Johnson</h4>
+              <span>United States</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="testimonial-card">
+        <img src="resources/annapurna1.jpg" alt="Annapurna Circuit" class="top-img">
+        <div class="testimonial-content">
+          <div class="stars">★★★★★</div>
+          <p>"Exceptional service from start to finish. The team at NepTra understood exactly what we wanted and
+            delivered beyond expectations. The mountain views were breathtaking and our guide Pemba was fantastic."</p>
+          <div class="trip-label">Trip: Annapurna Circuit</div>
+          <div class="user-info">
+            <img src="/resources/hans.jpg" alt="Hans Mueller">
+            <div class="user-details">
+              <h4>Hans Mueller</h4>
+              <span>Germany</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="testimonial-card">
+        <img src="resources/Gandruk-Kathmandu-Tour.jpg" alt="Kathmandu Tour" class="top-img">
+        <div class="testimonial-content">
+          <div class="stars">★★★★★</div>
+          <p>"Perfect introduction to Nepal's rich culture and history. The temples, the food, the people – everything
+            was amazing. NepTra's attention to cultural authenticity made this trip unforgettable."</p>
+          <div class="trip-label">Trip: Kathmandu Cultural Tour</div>
+          <div class="user-info">
+            <img src="/resources/yuki.jpg" alt="Yuki Tanaka">
+            <div class="user-details">
+              <h4>Yuki Tanaka</h4>
+              <span>Japan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+
+      <!-- About & Contact -->
+      <div class="footer-about">
+        <h2><span>NepTra</span></h2>
+        <p>Your trusted partner for authentic Nepal experiences. We've been crafting unforgettable journeys through the
+          Himalayas for over 15 years.</p>
+
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> Thamel, Kathmandu, Nepal</li>
+          <li><i class="fas fa-phone"></i> +977-9843764833</li>
+          <li><i class="fas fa-envelope"></i> info@neptra.com</li>
+        </ul>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">About NepTra</a></li>
+          <li><a href="#">Our Packages</a></li>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Travel Blog</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h3>Our Services</h3>
+        <ul>
+          <li><a href="#">Trekking & Hiking</a></li>
+          <li><a href="#">Cultural Tours</a></li>
+          <li><a href="#">Adventure Sports</a></li>
+          <li><a href="#">Hotel Booking</a></li>
+          <li><a href="#">Transportation</a></li>
+          <li><a href="#">Tailor-made Tours</a></li>
+        </ul>
+      </div>
+
+      <!-- Popular Destinations -->
+      <div class="footer-col">
+        <h3>Popular Destinations</h3>
+        <ul>
+          <li><a href="#">Everest Region</a></li>
+          <li><a href="#">Annapurna Circuit</a></li>
+          <li><a href="#">Kathmandu Valley</a></li>
+          <li><a href="#">Pokhara</a></li>
+          <li><a href="#">Chitwan National Park</a></li>
+          <li><a href="#">Langtang Valley</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 NepTra. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script>
+    // JavaScript for interactivity will go here
+
+    // Navbar active link highlight
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('.nav-links ul li a');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          navLinks.forEach(item => item.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      // Date picker for travel dates (using a simple input, but could integrate a library)
+      const travelDatesInput = document.getElementById('travel-dates');
+      // A real date picker library (like flatpickr or jQuery UI Datepicker) would be used here.
+      // For now, this just demonstrates a focus state.
+      travelDatesInput.addEventListener('focus', () => {
+        console.log('Date picker focused');
+        // In a real scenario, you'd open the date picker UI here.
+      });
+      travelDatesInput.addEventListener('blur', () => {
+        console.log('Date picker blurred');
+      });
+
+      // Placeholder for search button functionality
+      document.querySelector('.search-btn').addEventListener('click', () => {
+        const destination = document.getElementById('destination').value;
+        const dates = document.getElementById('travel-dates').value;
+        const travelers = document.getElementById('travelers').value;
+
+        if (destination || dates || travelers) {
+          alert(`Searching for:\nDestination: ${destination}\nDates: ${dates}\nTravelers: ${travelers}`);
+          // In a real application, you would send this data to a backend or filter results.
+        } else {
+          alert('Please select some search criteria!');
+        }
+      });
+
+      // Add subtle parallax effect to hero background on scroll (optional)
+      window.addEventListener('scroll', () => {
+        const heroBackground = document.querySelector('.hero-background');
+        const scrollPosition = window.pageYOffset;
+        heroBackground.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+      });
+
+      // Add hover effects for buttons (already handled by CSS transitions, but JS could add more complex ones)
+      const heroBtns = document.querySelectorAll('.hero-btn');
+      heroBtns.forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+          btn.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3)';
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.boxShadow = 'none';
+        });
+      });
+
+      // Language switcher dropdown (simple toggle for demonstration)
+      const langSwitcher = document.querySelector('.lang-switcher');
+      langSwitcher.addEventListener('click', () => {
+        alert('Language switching functionality would be implemented here!');
+        // In a real app, this would show a dropdown or navigate to a different language version.
+      });
+    });
+  </script>
+
+</body>
+
+</html>

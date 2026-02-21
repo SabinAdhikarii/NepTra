@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NepTra - Travel Packages</title>
+  <link rel="stylesheet" href="CSS/payment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span><i class="fas fa-phone-alt"></i> +977-9843764833</span>
+      <span><i class="fas fa-envelope"></i> info@neptra.com</span>
+    </div>
+    <div class="top-bar-right">
+      Follow us:
+      <a href="#"><i class="fab fa-facebook-f"></i> FB</a>
+      <a href="#"><i class="fab fa-instagram"></i> IG</a>
+      <a href="#"><i class="fab fa-twitter"></i> TW</a>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="logo"></div>
+      <a href="index.html">NepTra</a> <span>Nepal Travel</span>
+    </div>
+    <div class="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html"> Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="navbar-actions">
+      <div class="lang-switcher">
+        <i class="fas fa-globe"></i>
+        <span>नेपाली</span>
+        <i class="fas fa-caret-down"></i>
+      </div>
+      <a href="#" class="book-now-btn">Book Now</a>
+    </div>
+  </nav>
+
+    <!-- Payment Content -->
+    <div class="payment-container">
+        <div class="payment-header">
+            <h1>Secure Payment</h1>
+            <p>Complete your booking by selecting a payment method</p>
+        </div>
+        
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            
+            <div class="package-card">
+                <div class="package-image">
+                    <img id="summary-image" src="" alt="Package Image">
+                </div>
+                <div class="package-details">
+                    <h3 id="summary-package">Everest Base Camp Trek</h3>
+                    <p id="summary-desc">12 Days | Moderate Difficulty</p>
+                    <p>Travelers: <span id="summary-travelers">2</span></p>
+                    <p>Date: <span id="summary-date">2025-11-15</span></p>
+                </div>
+            </div>
+            
+            <div class="price-details">
+                <div class="price-row">
+                    <span>Package Price (x<span id="travelers-count">2</span>)</span>
+                    <span id="package-price">$1,798.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Service Fee</span>
+                    <span>$50.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Tax</span>
+                    <span>$89.90</span>
+                </div>
+                <div class="price-row price-total">
+                    <span>Total Amount</span>
+                    <span id="total-amount">$1,937.90</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Payment Methods -->
+        <div class="payment-methods">
+            <h2>Select Payment Method</h2>
+            
+            <!-- Credit/Debit Card -->
+            <div class="payment-option selected" id="card-option">
+                <div class="payment-header-row">
+                    <div class="payment-title">
+                        <div class="payment-icon">
+                            <i class="far fa-credit-card"></i>
+                        </div>
+                        <div class="payment-name">Credit/Debit Card</div>
+                    </div>
+                    <div class="payment-check">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="payment-details">
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry-date">Expiry Date</label>
+                            <input type="text" id="expiry-date" class="form-control" placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" class="form-control" placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-name">Name on Card</label>
+                        <input type="text" id="card-name" class="form-control" placeholder="John Doe">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PayPal -->
+            <div class="payment-option" id="paypal-option">
+                <div class="payment-header-row">
+                    <div class="payment-title">
+                        <div class="payment-icon">
+                            <i class="fab fa-paypal"></i>
+                        </div>
+                        <div class="payment-name">PayPal</div>
+                    </div>
+                    <div class="payment-check">
+                        <i class="far fa-circle"></i>
+                    </div>
+                </div>
+                <div class="payment-details">
+                    <p>You will be redirected to PayPal to complete your payment securely.</p>
+                </div>
+            </div>
+            
+            <!-- eSewa (Popular in Nepal) -->
+            <div class="payment-option" id="esewa-option">
+                <div class="payment-header-row">
+                    <div class="payment-title">
+                        <div class="payment-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="payment-name">eSewa</div>
+                    </div>
+                    <div class="payment-check">
+                        <i class="far fa-circle"></i>
+                    </div>
+                </div>
+                <div class="payment-details">
+                    <p>Pay with your eSewa wallet. You will be redirected to eSewa to complete payment.</p>
+                </div>
+            </div>
+            
+            <!-- Khalti (Popular in Nepal) -->
+            <div class="payment-option" id="khalti-option">
+                <div class="payment-header-row">
+                    <div class="payment-title">
+                        <div class="payment-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="payment-name">Khalti</div>
+                    </div>
+                    <div class="payment-check">
+                        <i class="far fa-circle"></i>
+                    </div>
+                </div>
+                <div class="payment-details">
+                    <p>Pay with your Khalti wallet. You will be redirected to Khalti to complete payment.</p>
+                </div>
+            </div>
+            
+            <!-- Bank Transfer -->
+            <div class="payment-option" id="bank-option">
+                <div class="payment-header-row">
+                    <div class="payment-title">
+                        <div class="payment-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="payment-name">Bank Transfer</div>
+                    </div>
+                    <div class="payment-check">
+                        <i class="far fa-circle"></i>
+                    </div>
+                </div>
+                <div class="payment-details">
+                    <p>Make a direct bank transfer. Use the details below:</p>
+                    <p><strong>Bank:</strong> Nepal Bank Ltd.</p>
+                    <p><strong>Account Name:</strong> NepTra Pvt. Ltd.</p>
+                    <p><strong>Account Number:</strong> 1234567890123456</p>
+                    <p><strong>Swift Code:</strong> NBOCNPKA</p>
+                </div>
+            </div>
+            
+            <button class="btn-pay" id="pay-button">Pay Now - $1,937.90</button>
+            
+            <div class="security-notice">
+                <i class="fas fa-lock"></i>
+                <span>Your payment information is secure and encrypted</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+      <footer>
+    <div class="footer-container">
+
+      <!-- About & Contact -->
+      <div class="footer-about">
+        <h2><span>NepTra</span></h2>
+        <p>Your trusted partner for authentic Nepal experiences. We've been crafting unforgettable journeys through the
+          Himalayas for over 15 years.</p>
+
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> Thamel, Kathmandu, Nepal</li>
+          <li><i class="fas fa-phone"></i> +977-9843764833</li>
+          <li><i class="fas fa-envelope"></i> info@neptra.com</li>
+        </ul>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">About NepTra</a></li>
+          <li><a href="#">Our Packages</a></li>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Travel Blog</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h3>Our Services</h3>
+        <ul>
+          <li><a href="#">Trekking & Hiking</a></li>
+          <li><a href="#">Cultural Tours</a></li>
+          <li><a href="#">Adventure Sports</a></li>
+          <li><a href="#">Hotel Booking</a></li>
+          <li><a href="#">Transportation</a></li>
+          <li><a href="#">Tailor-made Tours</a></li>
+        </ul>
+      </div>
+
+      <!-- Popular Destinations -->
+      <div class="footer-col">
+        <h3>Popular Destinations</h3>
+        <ul>
+          <li><a href="#">Everest Region</a></li>
+          <li><a href="#">Annapurna Circuit</a></li>
+          <li><a href="#">Kathmandu Valley</a></li>
+          <li><a href="#">Pokhara</a></li>
+          <li><a href="#">Chitwan National Park</a></li>
+          <li><a href="#">Langtang Valley</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 NepTra. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+    <script>
+        // Get URL parameters from checkout page
+        const urlParams = new URLSearchParams(window.location.search);
+        const packageName = urlParams.get('package') || 'Everest Base Camp Trek';
+        const packagePrice = urlParams.get('price') || '899';
+        const packageImage = urlParams.get('image') || 'https://images.unsplash.com/photo-1544735716-2fdfb0078416?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80';
+        const packageDesc = urlParams.get('desc') || '12 Days | Moderate Difficulty';
+        const travelers = urlParams.get('travelers') || '2';
+        const travelDate = urlParams.get('date') || '2025-11-15';
+        const fullName = urlParams.get('fullname') || '';
+        const email = urlParams.get('email') || '';
+        const phone = urlParams.get('phone') || '';
+
+        // Display order summary
+        document.getElementById('summary-package').textContent = packageName;
+        document.getElementById('summary-desc').textContent = decodeURIComponent(packageDesc);
+        document.getElementById('summary-image').src = packageImage;
+        document.getElementById('summary-travelers').textContent = travelers;
+        document.getElementById('summary-date').textContent = travelDate;
+        document.getElementById('travelers-count').textContent = travelers;
+        
+        // Calculate and display prices
+        const basePrice = parseInt(packagePrice);
+        const totalPackagePrice = basePrice * parseInt(travelers);
+        const serviceFee = 50;
+        const tax = totalPackagePrice * 0.05; // 5% tax
+        const totalAmount = totalPackagePrice + serviceFee + tax;
+        
+        document.getElementById('package-price').textContent = `$${totalPackagePrice.toFixed(2)}`;
+        document.getElementById('total-amount').textContent = `$${totalAmount.toFixed(2)}`;
+        document.getElementById('pay-button').textContent = `Pay Now - $${totalAmount.toFixed(2)}`;
+
+        // Payment method selection
+        document.querySelectorAll('.payment-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.payment-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                    opt.querySelector('.payment-check i').className = 'far fa-circle';
+                });
+                option.classList.add('selected');
+                option.querySelector('.payment-check i').className = 'fas fa-check-circle';
+            });
+        });
+
+        // Format card number input
+        document.getElementById('card-number').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ');
+            if (formattedValue) {
+                e.target.value = formattedValue;
+            }
+        });
+
+        // Format expiry date input
+        document.getElementById('expiry-date').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+            if (value.length >= 2) {
+                e.target.value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+        });
+
+        // Payment button click
+        document.getElementById('pay-button').addEventListener('click', function() {
+            const selectedPayment = document.querySelector('.payment-option.selected').id;
+            
+            // Validate card details if card is selected
+            if (selectedPayment === 'card-option') {
+                const cardNumber = document.getElementById('card-number').value.replace(/\s/g, '');
+                const expiryDate = document.getElementById('expiry-date').value;
+                const cvv = document.getElementById('cvv').value;
+                const cardName = document.getElementById('card-name').value;
+                
+                if (!cardNumber || cardNumber.length !== 16) {
+                    alert('Please enter a valid 16-digit card number');
+                    return;
+                }
+                
+                if (!expiryDate || expiryDate.length !== 5) {
+                    alert('Please enter a valid expiry date (MM/YY)');
+                    return;
+                }
+                
+                if (!cvv || cvv.length !== 3) {
+                    alert('Please enter a valid CVV');
+                    return;
+                }
+                
+                if (!cardName) {
+                    alert('Please enter the name on your card');
+                    return;
+                }
+            }
+            // Show success message
+            alert(`Payment successful! Your ${packageName} booking has been confirmed. A confirmation email has been sent to ${email}.`);
+            
+            // In a real application, you would submit the payment details to a server here
+            // and redirect to a confirmation page
+        });
+    </script>
+</body>
+</html>
