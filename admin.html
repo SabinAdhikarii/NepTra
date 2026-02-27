@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NepTra Admin Dashboard</title>
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">
+        <i class="fas fa-mountain"></i>
+      </div>
+      <div class="brand-text">
+        <h2>NepTra</h2>
+        <span>Admin Panel</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Main</div>
+      <a href="#" class="nav-item active">
+        <i class="fas fa-th-large"></i>
+        Dashboard
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-calendar-check"></i>
+        Bookings
+        <span class="badge">24</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-box-open"></i>
+        Packages
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-map-marked-alt"></i>
+        Destinations
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-users"></i>
+        Customers
+        <span class="badge">5</span>
+      </a>
+
+      <div class="nav-section-label">Content</div>
+      <a href="#" class="nav-item">
+        <i class="fas fa-pen-fancy"></i>
+        Blog Posts
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-star"></i>
+        Reviews
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-envelope"></i>
+        Messages
+        <span class="badge">8</span>
+      </a>
+
+      <div class="nav-section-label">Finance</div>
+      <a href="#" class="nav-item">
+        <i class="fas fa-chart-line"></i>
+        Revenue
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-file-invoice-dollar"></i>
+        Invoices
+      </a>
+
+      <div class="nav-section-label">System</div>
+      <a href="#" class="nav-item">
+        <i class="fas fa-user-shield"></i>
+        Team
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-cog"></i>
+        Settings
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="user-avatar">RA</div>
+        <div class="user-info">
+          <h4>Ram Adhikari</h4>
+          <span>Super Admin</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="header-greeting">
+          <h1>Dashboard</h1>
+          <p id="greetingText">Welcome back, Ram</p>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="header-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search bookings, customers...">
+        </div>
+
+        <button class="header-action" title="Notifications">
+          <i class="fas fa-bell"></i>
+          <span class="notification-dot"></span>
+        </button>
+        <button class="header-action" title="Messages">
+          <i class="fas fa-comment-dots"></i>
+        </button>
+
+        <div class="header-divider"></div>
+
+        <div class="header-profile">
+          <div class="avatar">RA</div>
+          <div class="profile-info">
+            <h4>Ram Adhikari</h4>
+            <span>Super Admin</span>
+          </div>
+          <i class="fas fa-chevron-down" style="font-size: 10px; color: var(--text-light); margin-left: 4px;"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-content">
+
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <!-- Total Bookings -->
+        <div class="stat-card">
+          <div class="stat-card-header">
+            <div class="stat-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="stat-trend up">
+              <i class="fas fa-arrow-up"></i>
+              12.5%
+            </div>
+          </div>
+          <div class="stat-value">1,284</div>
+          <div class="stat-label">Total Bookings</div>
+          <div class="sparkline-container">
+            <div class="sparkline-bar" style="height: 40%"></div>
+            <div class="sparkline-bar" style="height: 55%"></div>
+            <div class="sparkline-bar" style="height: 45%"></div>
+            <div class="sparkline-bar" style="height: 70%"></div>
+            <div class="sparkline-bar" style="height: 60%"></div>
+            <div class="sparkline-bar" style="height: 80%"></div>
+            <div class="sparkline-bar" style="height: 75%"></div>
+            <div class="sparkline-bar" style="height: 95%"></div>
+            <div class="sparkline-bar" style="height: 85%"></div>
+            <div class="sparkline-bar" style="height: 100%"></div>
+          </div>
+        </div>
+
+        <!-- Revenue -->
+        <div class="stat-card">
+          <div class="stat-card-header">
+            <div class="stat-icon">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="stat-trend up">
+              <i class="fas fa-arrow-up"></i>
+              8.2%
+            </div>
+          </div>
+          <div class="stat-value">$384,520</div>
+          <div class="stat-label">Total Revenue</div>
+          <div class="sparkline-container">
+            <div class="sparkline-bar" style="height: 50%"></div>
+            <div class="sparkline-bar" style="height: 35%"></div>
+            <div class="sparkline-bar" style="height: 65%"></div>
+            <div class="sparkline-bar" style="height: 55%"></div>
+            <div class="sparkline-bar" style="height: 75%"></div>
+            <div class="sparkline-bar" style="height: 60%"></div>
+            <div class="sparkline-bar" style="height: 85%"></div>
+            <div class="sparkline-bar" style="height: 70%"></div>
+            <div class="sparkline-bar" style="height: 90%"></div>
+            <div class="sparkline-bar" style="height: 95%"></div>
+          </div>
+        </div>
+
+        <!-- Active Packages -->
+        <div class="stat-card">
+          <div class="stat-card-header">
+            <div class="stat-icon">
+              <i class="fas fa-box-open"></i>
+            </div>
+            <div class="stat-trend up">
+              <i class="fas fa-arrow-up"></i>
+              3 new
+            </div>
+          </div>
+          <div class="stat-value">48</div>
+          <div class="stat-label">Active Packages</div>
+          <div class="sparkline-container">
+            <div class="sparkline-bar" style="height: 60%"></div>
+            <div class="sparkline-bar" style="height: 65%"></div>
+            <div class="sparkline-bar" style="height: 70%"></div>
+            <div class="sparkline-bar" style="height: 68%"></div>
+            <div class="sparkline-bar" style="height: 72%"></div>
+            <div class="sparkline-bar" style="height: 78%"></div>
+            <div class="sparkline-bar" style="height: 80%"></div>
+            <div class="sparkline-bar" style="height: 85%"></div>
+            <div class="sparkline-bar" style="height: 82%"></div>
+            <div class="sparkline-bar" style="height: 90%"></div>
+          </div>
+        </div>
+
+        <!-- Customers -->
+        <div class="stat-card">
+          <div class="stat-card-header">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-trend down">
+              <i class="fas fa-arrow-down"></i>
+              2.1%
+            </div>
+          </div>
+          <div class="stat-value">10,482</div>
+          <div class="stat-label">Total Customers</div>
+          <div class="sparkline-container">
+            <div class="sparkline-bar" style="height: 90%"></div>
+            <div class="sparkline-bar" style="height: 85%"></div>
+            <div class="sparkline-bar" style="height: 88%"></div>
+            <div class="sparkline-bar" style="height: 80%"></div>
+            <div class="sparkline-bar" style="height: 75%"></div>
+            <div class="sparkline-bar" style="height: 78%"></div>
+            <div class="sparkline-bar" style="height: 70%"></div>
+            <div class="sparkline-bar" style="height: 72%"></div>
+            <div class="sparkline-bar" style="height: 68%"></div>
+            <div class="sparkline-bar" style="height: 65%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Grid: Revenue Chart + Popular Destinations -->
+      <div class="content-grid">
+        <!-- Revenue Chart -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Revenue Overview</h3>
+            <div class="card-actions">
+              <button class="card-action-btn">Weekly</button>
+              <button class="card-action-btn active">Monthly</button>
+              <button class="card-action-btn">Yearly</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="chart-container">
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 45%" data-value="$18K"></div>
+                  <div class="chart-bar secondary" style="height: 35%" data-value="$14K"></div>
+                </div>
+                <span class="label">Jan</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 55%" data-value="$22K"></div>
+                  <div class="chart-bar secondary" style="height: 40%" data-value="$16K"></div>
+                </div>
+                <span class="label">Feb</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 70%" data-value="$28K"></div>
+                  <div class="chart-bar secondary" style="height: 50%" data-value="$20K"></div>
+                </div>
+                <span class="label">Mar</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 85%" data-value="$34K"></div>
+                  <div class="chart-bar secondary" style="height: 60%" data-value="$24K"></div>
+                </div>
+                <span class="label">Apr</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 65%" data-value="$26K"></div>
+                  <div class="chart-bar secondary" style="height: 45%" data-value="$18K"></div>
+                </div>
+                <span class="label">May</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 50%" data-value="$20K"></div>
+                  <div class="chart-bar secondary" style="height: 38%" data-value="$15K"></div>
+                </div>
+                <span class="label">Jun</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 40%" data-value="$16K"></div>
+                  <div class="chart-bar secondary" style="height: 30%" data-value="$12K"></div>
+                </div>
+                <span class="label">Jul</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 58%" data-value="$23K"></div>
+                  <div class="chart-bar secondary" style="height: 42%" data-value="$17K"></div>
+                </div>
+                <span class="label">Aug</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 90%" data-value="$36K"></div>
+                  <div class="chart-bar secondary" style="height: 65%" data-value="$26K"></div>
+                </div>
+                <span class="label">Sep</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 100%" data-value="$40K"></div>
+                  <div class="chart-bar secondary" style="height: 70%" data-value="$28K"></div>
+                </div>
+                <span class="label">Oct</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 80%" data-value="$32K"></div>
+                  <div class="chart-bar secondary" style="height: 55%" data-value="$22K"></div>
+                </div>
+                <span class="label">Nov</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bars">
+                  <div class="chart-bar primary" style="height: 60%" data-value="$24K"></div>
+                  <div class="chart-bar secondary" style="height: 40%" data-value="$16K"></div>
+                </div>
+                <span class="label">Dec</span>
+              </div>
+            </div>
+          </div>
+          <div class="chart-legend">
+            <div class="chart-legend-item">
+              <div class="dot primary"></div>
+              This Year
+            </div>
+            <div class="chart-legend-item">
+              <div class="dot secondary"></div>
+              Last Year
+            </div>
+          </div>
+        </div>
+
+        <!-- Popular Destinations -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Top Destinations</h3>
+            <div class="card-actions">
+              <button class="card-action-btn active">This Month</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="destination-list">
+              <div class="destination-item">
+                <div class="destination-img">
+                  <img src="resources/trekking_03.jpg" alt="Everest Base Camp">
+                  <span class="rank">1</span>
+                </div>
+                <div class="destination-info">
+                  <h4>Everest Base Camp</h4>
+                  <p>14 days trek</p>
+                </div>
+                <div class="destination-stats">
+                  <div class="bookings">186</div>
+                  <div class="percentage">+18%</div>
+                </div>
+              </div>
+
+              <div class="destination-item">
+                <div class="destination-img">
+                  <img src="resources/gandruk-kathmandu-tour.jpg" alt="Annapurna Circuit">
+                  <span class="rank">2</span>
+                </div>
+                <div class="destination-info">
+                  <h4>Annapurna Circuit</h4>
+                  <p>12 days trek</p>
+                </div>
+                <div class="destination-stats">
+                  <div class="bookings">142</div>
+                  <div class="percentage">+12%</div>
+                </div>
+              </div>
+
+              <div class="destination-item">
+                <div class="destination-img">
+                  <img src="resources/kathmandu-pokhara-lumbini-chitwan-tour-1-1050x540.jpg" alt="Kathmandu Valley">
+                  <span class="rank">3</span>
+                </div>
+                <div class="destination-info">
+                  <h4>Kathmandu Valley</h4>
+                  <p>3 days cultural tour</p>
+                </div>
+                <div class="destination-stats">
+                  <div class="bookings">128</div>
+                  <div class="percentage">+9%</div>
+                </div>
+              </div>
+
+              <div class="destination-item">
+                <div class="destination-img">
+                  <img src="resources/muktinath-temple-nepal 2.jpg" alt="Muktinath Temple">
+                  <span class="rank">4</span>
+                </div>
+                <div class="destination-info">
+                  <h4>Muktinath Temple</h4>
+                  <p>5 days pilgrimage</p>
+                </div>
+                <div class="destination-stats">
+                  <div class="bookings">97</div>
+                  <div class="percentage">+6%</div>
+                </div>
+              </div>
+
+              <div class="destination-item">
+                <div class="destination-img">
+                  <img src="resources/attractive-nepal.jpg" alt="Pokhara Adventure">
+                  <span class="rank">5</span>
+                </div>
+                <div class="destination-info">
+                  <h4>Pokhara Adventure</h4>
+                  <p>4 days adventure</p>
+                </div>
+                <div class="destination-stats">
+                  <div class="bookings">84</div>
+                  <div class="percentage">+15%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="view-all-link">
+            View All Destinations <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Recent Bookings Table -->
+      <div class="card" style="margin-bottom: 28px;">
+        <div class="card-header">
+          <h3>Recent Bookings</h3>
+          <div class="card-actions">
+            <button class="card-action-btn active">All</button>
+            <button class="card-action-btn">Confirmed</button>
+            <button class="card-action-btn">Pending</button>
+          </div>
+        </div>
+        <div class="bookings-table-wrapper">
+          <table class="bookings-table">
+            <thead>
+              <tr>
+                <th>Customer</th>
+                <th>Package</th>
+                <th class="hide-mobile">Travel Date</th>
+                <th class="hide-mobile">Travelers</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="customer-cell">
+                    <div class="customer-avatar" style="background: linear-gradient(135deg, #ee5a52, #f78ca0);">SJ</div>
+                    <div>
+                      <div class="customer-name">Sarah Johnson</div>
+                      <div class="customer-email">sarah.j@email.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Everest Base Camp Trek</td>
+                <td class="hide-mobile">Mar 15, 2026</td>
+                <td class="hide-mobile">4</td>
+                <td><strong>$3,596</strong></td>
+                <td><span class="status-badge confirmed">Confirmed</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="customer-cell">
+                    <div class="customer-avatar" style="background: linear-gradient(135deg, #3498db, #5dade2);">HM</div>
+                    <div>
+                      <div class="customer-name">Hans Mueller</div>
+                      <div class="customer-email">hans.m@email.de</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Annapurna Circuit</td>
+                <td class="hide-mobile">Mar 22, 2026</td>
+                <td class="hide-mobile">2</td>
+                <td><strong>$1,798</strong></td>
+                <td><span class="status-badge confirmed">Confirmed</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="customer-cell">
+                    <div class="customer-avatar" style="background: linear-gradient(135deg, #9b59b6, #c39bd3);">YT</div>
+                    <div>
+                      <div class="customer-name">Yuki Tanaka</div>
+                      <div class="customer-email">yuki.t@email.jp</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Kathmandu Weekend</td>
+                <td class="hide-mobile">Mar 10, 2026</td>
+                <td class="hide-mobile">1</td>
+                <td><strong>$199</strong></td>
+                <td><span class="status-badge pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="customer-cell">
+                    <div class="customer-avatar" style="background: linear-gradient(135deg, #178370, #1ea88f);">JD</div>
+                    <div>
+                      <div class="customer-name">John Davis</div>
+                      <div class="customer-email">john.d@email.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Pokhara Daytrip</td>
+                <td class="hide-mobile">Feb 28, 2026</td>
+                <td class="hide-mobile">6</td>
+                <td><strong>$534</strong></td>
+                <td><span class="status-badge completed">Completed</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="customer-cell">
+                    <div class="customer-avatar" style="background: linear-gradient(135deg, #f7d45e, #f0c27b);">MP</div>
+                    <div>
+                      <div class="customer-name">Maria Petrov</div>
+                      <div class="customer-email">maria.p@email.ru</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Muktinath Pilgrimage</td>
+                <td class="hide-mobile">Apr 5, 2026</td>
+                <td class="hide-mobile">3</td>
+                <td><strong>$1,197</strong></td>
+                <td><span class="status-badge cancelled">Cancelled</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="customer-cell">
+                    <div class="customer-avatar" style="background: linear-gradient(135deg, #38b461, #55efc4);">LC</div>
+                    <div>
+                      <div class="customer-name">Li Chen</div>
+                      <div class="customer-email">li.chen@email.cn</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Langtang Valley Trek</td>
+                <td class="hide-mobile">Mar 30, 2026</td>
+                <td class="hide-mobile">2</td>
+                <td><strong>$1,398</strong></td>
+                <td><span class="status-badge confirmed">Confirmed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <a href="#" class="view-all-link">
+          View All Bookings <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Bottom Grid: Activity + Quick Actions / Reviews + Trips -->
+      <div class="bottom-grid">
+        <!-- Left Column: Activity Feed + Quick Actions -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          <!-- Activity Feed -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Recent Activity</h3>
+              <div class="card-actions">
+                <button class="card-action-btn active">All</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="activity-feed">
+                <div class="activity-item">
+                  <div class="activity-icon booking">
+                    <i class="fas fa-calendar-plus"></i>
+                  </div>
+                  <div class="activity-content">
+                    <p><strong>Sarah Johnson</strong> booked <strong>Everest Base Camp Trek</strong> for 4 travelers</p>
+                    <span class="time">2 minutes ago</span>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon payment">
+                    <i class="fas fa-credit-card"></i>
+                  </div>
+                  <div class="activity-content">
+                    <p>Payment of <strong>$1,798</strong> received from <strong>Hans Mueller</strong></p>
+                    <span class="time">15 minutes ago</span>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon review">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="activity-content">
+                    <p><strong>Yuki Tanaka</strong> left a 5-star review for <strong>Kathmandu Weekend</strong></p>
+                    <span class="time">1 hour ago</span>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon cancel">
+                    <i class="fas fa-times-circle"></i>
+                  </div>
+                  <div class="activity-content">
+                    <p><strong>Maria Petrov</strong> cancelled booking for <strong>Muktinath Pilgrimage</strong></p>
+                    <span class="time">3 hours ago</span>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon user">
+                    <i class="fas fa-user-plus"></i>
+                  </div>
+                  <div class="activity-content">
+                    <p><strong>Li Chen</strong> registered a new account and booked <strong>Langtang Valley</strong></p>
+                    <span class="time">5 hours ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Quick Actions</h3>
+            </div>
+            <div class="card-body">
+              <div class="quick-actions-grid">
+                <button class="quick-action">
+                  <div class="action-icon">
+                    <i class="fas fa-plus-circle"></i>
+                  </div>
+                  <span>New Package</span>
+                </button>
+                <button class="quick-action">
+                  <div class="action-icon">
+                    <i class="fas fa-paper-plane"></i>
+                  </div>
+                  <span>Send Newsletter</span>
+                </button>
+                <button class="quick-action">
+                  <div class="action-icon">
+                    <i class="fas fa-download"></i>
+                  </div>
+                  <span>Export Report</span>
+                </button>
+                <button class="quick-action">
+                  <div class="action-icon">
+                    <i class="fas fa-headset"></i>
+                  </div>
+                  <span>Support Tickets</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Reviews + Upcoming Trips -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          <!-- Customer Reviews -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Customer Reviews</h3>
+              <div class="card-actions">
+                <button class="card-action-btn active">Recent</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="review-summary">
+                <div class="review-score">
+                  <div class="score">4.9</div>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="total">2,847 reviews</div>
+                </div>
+                <div class="review-bars">
+                  <div class="review-bar-row">
+                    <span class="label">5</span>
+                    <div class="bar"><div class="fill" style="width: 82%"></div></div>
+                    <span class="count">2,334</span>
+                  </div>
+                  <div class="review-bar-row">
+                    <span class="label">4</span>
+                    <div class="bar"><div class="fill" style="width: 12%"></div></div>
+                    <span class="count">342</span>
+                  </div>
+                  <div class="review-bar-row">
+                    <span class="label">3</span>
+                    <div class="bar"><div class="fill" style="width: 4%"></div></div>
+                    <span class="count">114</span>
+                  </div>
+                  <div class="review-bar-row">
+                    <span class="label">2</span>
+                    <div class="bar"><div class="fill" style="width: 1.5%"></div></div>
+                    <span class="count">43</span>
+                  </div>
+                  <div class="review-bar-row">
+                    <span class="label">1</span>
+                    <div class="bar"><div class="fill" style="width: 0.5%"></div></div>
+                    <span class="count">14</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="recent-reviews">
+                <div class="review-item">
+                  <div class="review-item-header">
+                    <div class="reviewer">
+                      <div class="reviewer-avatar" style="background: linear-gradient(135deg, #ee5a52, #f78ca0);">SJ</div>
+                      <span class="reviewer-name">Sarah Johnson</span>
+                    </div>
+                    <div class="review-stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <p>"Absolutely incredible experience! The guides were knowledgeable and the views were breathtaking."</p>
+                </div>
+
+                <div class="review-item">
+                  <div class="review-item-header">
+                    <div class="reviewer">
+                      <div class="reviewer-avatar" style="background: linear-gradient(135deg, #3498db, #5dade2);">HM</div>
+                      <span class="reviewer-name">Hans Mueller</span>
+                    </div>
+                    <div class="review-stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <p>"Well organized trek with excellent support team. Would highly recommend to anyone visiting Nepal."</p>
+                </div>
+
+                <div class="review-item">
+                  <div class="review-item-header">
+                    <div class="reviewer">
+                      <div class="reviewer-avatar" style="background: linear-gradient(135deg, #9b59b6, #c39bd3);">YT</div>
+                      <span class="reviewer-name">Yuki Tanaka</span>
+                    </div>
+                    <div class="review-stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                  <p>"Beautiful cultural tour of Kathmandu. The temple visits were a highlight of my trip."</p>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="view-all-link">
+              View All Reviews <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Upcoming Trips -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Upcoming Departures</h3>
+              <div class="card-actions">
+                <button class="card-action-btn active">This Week</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="trip-list">
+                <div class="trip-item">
+                  <div class="trip-date">
+                    <span class="day">01</span>
+                    <span class="month">Mar</span>
+                  </div>
+                  <div class="trip-info">
+                    <h4>Everest Base Camp Trek</h4>
+                    <p>14 days &middot; Guide: Pemba Sherpa</p>
+                  </div>
+                  <div class="trip-travelers">
+                    <div class="traveler-dot" style="background: #ee5a52;">S</div>
+                    <div class="traveler-dot" style="background: #3498db;">H</div>
+                    <div class="traveler-dot" style="background: #9b59b6;">Y</div>
+                    <div class="traveler-dot more">+5</div>
+                  </div>
+                </div>
+
+                <div class="trip-item">
+                  <div class="trip-date">
+                    <span class="day">03</span>
+                    <span class="month">Mar</span>
+                  </div>
+                  <div class="trip-info">
+                    <h4>Annapurna Circuit</h4>
+                    <p>12 days &middot; Guide: Dorje Lama</p>
+                  </div>
+                  <div class="trip-travelers">
+                    <div class="traveler-dot" style="background: #178370;">J</div>
+                    <div class="traveler-dot" style="background: #f7d45e; color: #333;">M</div>
+                    <div class="traveler-dot more">+3</div>
+                  </div>
+                </div>
+
+                <div class="trip-item">
+                  <div class="trip-date">
+                    <span class="day">05</span>
+                    <span class="month">Mar</span>
+                  </div>
+                  <div class="trip-info">
+                    <h4>Kathmandu Cultural Tour</h4>
+                    <p>3 days &middot; Guide: Sita Rai</p>
+                  </div>
+                  <div class="trip-travelers">
+                    <div class="traveler-dot" style="background: #38b461;">L</div>
+                    <div class="traveler-dot" style="background: #ee5a52;">A</div>
+                    <div class="traveler-dot" style="background: #3498db;">R</div>
+                    <div class="traveler-dot more">+2</div>
+                  </div>
+                </div>
+
+                <div class="trip-item">
+                  <div class="trip-date">
+                    <span class="day">07</span>
+                    <span class="month">Mar</span>
+                  </div>
+                  <div class="trip-info">
+                    <h4>Pokhara Adventure Sports</h4>
+                    <p>4 days &middot; Guide: Bikram Thapa</p>
+                  </div>
+                  <div class="trip-travelers">
+                    <div class="traveler-dot" style="background: #9b59b6;">K</div>
+                    <div class="traveler-dot" style="background: #f7d45e; color: #333;">T</div>
+                    <div class="traveler-dot more">+4</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="view-all-link">
+              View Full Schedule <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package Distribution (Donut Chart) -->
+      <div class="content-grid" style="margin-bottom: 0;">
+        <div class="card">
+          <div class="card-header">
+            <h3>Package Distribution</h3>
+            <div class="card-actions">
+              <button class="card-action-btn active">All Time</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="donut-chart-container">
+              <div class="donut-chart" id="donutChart">
+                <div class="donut-center">
+                  <span class="total-value">1,284</span>
+                  <span class="total-label">Bookings</span>
+                </div>
+              </div>
+              <div class="donut-legend">
+                <div class="donut-legend-item">
+                  <div class="dot" style="background: var(--primary);"></div>
+                  <span class="legend-text">Trekking</span>
+                  <span class="legend-value">42%</span>
+                </div>
+                <div class="donut-legend-item">
+                  <div class="dot" style="background: var(--accent-blue);"></div>
+                  <span class="legend-text">Cultural Tours</span>
+                  <span class="legend-value">25%</span>
+                </div>
+                <div class="donut-legend-item">
+                  <div class="dot" style="background: var(--accent-gold);"></div>
+                  <span class="legend-text">Adventure Sports</span>
+                  <span class="legend-value">18%</span>
+                </div>
+                <div class="donut-legend-item">
+                  <div class="dot" style="background: var(--accent-purple);"></div>
+                  <span class="legend-text">Pilgrimage</span>
+                  <span class="legend-value">10%</span>
+                </div>
+                <div class="donut-legend-item">
+                  <div class="dot" style="background: var(--accent-orange);"></div>
+                  <span class="legend-text">Day Trips</span>
+                  <span class="legend-value">5%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Revenue by Source -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Revenue by Source</h3>
+          </div>
+          <div class="card-body">
+            <div class="destination-list">
+              <div class="destination-item">
+                <div class="activity-icon" style="background: rgba(23, 131, 112, 0.1); color: var(--primary); width: 44px; height: 44px; border-radius: 10px;">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div class="destination-info">
+                  <h4>Direct Website</h4>
+                  <p>neptra.com bookings</p>
+                </div>
+                <div class="destination-stats">
+                  <div class="bookings">$168K</div>
+                  <div class="percentage">44%</div>
+                </div>
+              </div>
+              <div class="destination-item">
+                <div class="activity-icon" style="background: rgba(52, 152, 219, 0.1); color: var(--accent-blue); width: 44px; height: 44px; border-radius: 10px;">
+                  <i class="fas fa-search"></i>
+                </div>
+                <div class="destination-info">
+                  <h4>Search / SEO</h4>
+                  <p>Google, Bing organic</p>
+                </div>
+                <div class="destination-stats">
+                  <div class="bookings">$96K</div>
+                  <div class="percentage">25%</div>
+                </div>
+              </div>
+              <div class="destination-item">
+                <div class="activity-icon" style="background: rgba(155, 89, 182, 0.1); color: var(--accent-purple); width: 44px; height: 44px; border-radius: 10px;">
+                  <i class="fas fa-share-alt"></i>
+                </div>
+                <div class="destination-info">
+                  <h4>Social Media</h4>
+                  <p>Instagram, Facebook ads</p>
+                </div>
+                <div class="destination-stats">
+                  <div class="bookings">$69K</div>
+                  <div class="percentage">18%</div>
+                </div>
+              </div>
+              <div class="destination-item">
+                <div class="activity-icon" style="background: rgba(247, 212, 94, 0.15); color: #c78d00; width: 44px; height: 44px; border-radius: 10px;">
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <div class="destination-info">
+                  <h4>Partners / Affiliates</h4>
+                  <p>Travel agencies, hotels</p>
+                </div>
+                <div class="destination-stats">
+                  <div class="bookings">$38K</div>
+                  <div class="percentage">10%</div>
+                </div>
+              </div>
+              <div class="destination-item">
+                <div class="activity-icon" style="background: rgba(238, 90, 82, 0.1); color: var(--accent-red); width: 44px; height: 44px; border-radius: 10px;">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="destination-info">
+                  <h4>Email Campaigns</h4>
+                  <p>Newsletter, drip campaigns</p>
+                </div>
+                <div class="destination-stats">
+                  <div class="bookings">$13K</div>
+                  <div class="percentage">3%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    // ============================================
+    // Mobile Sidebar Toggle
+    // ============================================
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      sidebarOverlay.classList.toggle('active');
+    });
+
+    sidebarOverlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      sidebarOverlay.classList.remove('active');
+    });
+
+    // ============================================
+    // Nav Item Active State
+    // ============================================
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+
+        // Close sidebar on mobile after selection
+        if (window.innerWidth <= 1024) {
+          sidebar.classList.remove('open');
+          sidebarOverlay.classList.remove('active');
+        }
+      });
+    });
+
+    // ============================================
+    // Card Action Button Toggle
+    // ============================================
+    document.querySelectorAll('.card-actions').forEach(group => {
+      group.querySelectorAll('.card-action-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          group.querySelectorAll('.card-action-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+
+    // ============================================
+    // Dynamic Greeting
+    // ============================================
+    const greetingText = document.getElementById('greetingText');
+    const hour = new Date().getHours();
+    let greeting = 'Good evening';
+    if (hour < 12) greeting = 'Good morning';
+    else if (hour < 17) greeting = 'Good afternoon';
+    greetingText.textContent = `${greeting}, Ram`;
+
+    // ============================================
+    // Donut Chart (Pure CSS/JS)
+    // ============================================
+    function renderDonutChart() {
+      const data = [
+        { value: 42, color: '#178370' },
+        { value: 25, color: '#3498db' },
+        { value: 18, color: '#f7d45e' },
+        { value: 10, color: '#9b59b6' },
+        { value: 5, color: '#ff9f43' }
+      ];
+
+      const chart = document.getElementById('donutChart');
+      let gradientParts = [];
+      let cumulative = 0;
+
+      data.forEach(segment => {
+        const start = cumulative;
+        cumulative += segment.value;
+        gradientParts.push(`${segment.color} ${start}% ${cumulative}%`);
+      });
+
+      chart.style.background = `conic-gradient(${gradientParts.join(', ')})`;
+    }
+
+    renderDonutChart();
+
+    // ============================================
+    // Animate chart bars on scroll
+    // ============================================
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.chart-bar').forEach((bar, i) => {
+            bar.style.animationDelay = `${i * 0.05}s`;
+          });
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.chart-container').forEach(container => {
+      observer.observe(container);
+    });
+
+    // ============================================
+    // Animate review bars on scroll
+    // ============================================
+    const reviewObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.fill').forEach(fill => {
+            const width = fill.style.width;
+            fill.style.width = '0%';
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                fill.style.width = width;
+              });
+            });
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.review-summary').forEach(summary => {
+      reviewObserver.observe(summary);
+    });
+  </script>
+
+</body>
+</html>
