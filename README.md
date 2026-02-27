@@ -80,12 +80,29 @@ Have questions, feedback, or want to collaborate on Nepal tourism content? Reach
 
 ## ❤️ Acknowledgments
 
-Built with ❤️ in Kathmandu by सविन (Sabin) — aspiring web developer passionate about showcasing Nepal to the world.
+Built with ❤️ in Kathmandu by  (Sabin) — aspiring web developer passionate about showcasing Nepal to the world.
 
 Inspired by the real beauty of the Himalayas and the warm hospitality of Nepali people.
 
 May every visitor find their perfect adventure!
 
-© 2025–2026 NepTra. All rights reserved.
 
-Happy trekking! 🏔️🇳🇵
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit issues or pull requests to improve the project.
+
+---
+
+
+## 👤 Author
+
+**SabinAdhikari**  
+GitHub: [SabinAdhikarii](https://github.com/SabinAdhikarii)
+
+---
+
+## 📞 Support
+
+For questions or issues, please contact me at sabinofficial99@gmail.com).
+
+Made with ❤️ by Sabin Adhikari | © 2025–2026 NepTra. All rights reserved.
